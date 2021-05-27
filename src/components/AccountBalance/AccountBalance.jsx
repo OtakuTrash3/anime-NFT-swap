@@ -5,14 +5,20 @@ import styled from 'styled-components';
 const Section = styled.section`
     font-size: 1.3rem;
     text-align: left;
-    padding: 1.2rem 0 1.2rem 18rem;
+    padding: 1.2rem 0 1.2rem 39rem;
 `;
 
 export default class AccountBalance extends Component {
     render() {
+        const buttonText = this.props.hideBalance ? 'Hide Balance' : 'Show Balance';
+        let content = null;
+        if ( this.props.showBalance ) {
+            content = <>Balance: ${this.props.amount}</>;
+        }
         return (
             <Section>
-              Account Balance: ${this.props.amount}
+              {content}
+              <button onClick={this.props.handleBalanceVisibilityChange}>{buttonText}</button>
             </Section>
         );
     }

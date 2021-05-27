@@ -18,7 +18,7 @@ color: rgba(223, 189, 255, 0.753);
 `;
 
 const H1 = styled.h1`
-  font-size: 6rem;
+  font-size: 4.2rem;
 `;
 
 export default class ExchangeHeader extends Component {
